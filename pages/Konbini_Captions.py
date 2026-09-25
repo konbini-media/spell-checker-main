@@ -19,7 +19,7 @@ from openai import OpenAI
 st.set_page_config(page_title='Konbini Correction Tool', page_icon=None, layout="wide")
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-llm = ChatOpenAI(model="gpt-5.2", api_key=openai_api_key)
+llm = ChatOpenAI(model="gpt-5.2", api_key=os.environ["OPENAI_API_KEY"])
 llm_output = ""
 PROJECT_ID = '188768948707'
 # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "secrets/streamlit-service-account.json"
